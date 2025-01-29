@@ -1,0 +1,90 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Header Styling */
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Section Styling */
+.section {
+    position: relative;
+    background-color: lightgray;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: darkgray;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    color: white;
+    border: 1px solid black;
+}
+
+/* Text inside sections */
+.section p {
+    margin-top: 40px; /* Push text down so it doesn't overlap title */
+}
+
+/* Layout for Desktop (992px and above) */
+@media (min-width: 992px) {
+    .section {
+        width: 32%; /* 3 equal-width sections */
+        float: left;
+        margin-right: 2%; /* Space between sections */
+    }
+
+    .section:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Layout for Tablet (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .section {
+        width: 48%; /* First two sections take half the width */
+        float: left;
+        margin-right: 4%; /* Space between sections */
+    }
+
+    .section:last-child {
+        width: 100%; /* Last section takes full width */
+        margin-right: 0;
+    }
+}
+
+/* Layout for Mobile (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Each section takes full width */
+        margin-right: 0;
+    }
+}
+
+/* Ensures proper spacing and responsive layout on all screen sizes */
+@media (max-width: 991px) {
+    .section {
+        margin-bottom: 20px;
+    }
+}
